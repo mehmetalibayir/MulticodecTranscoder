@@ -1,0 +1,23 @@
+
+					
+							H264
+ffmpeg -i input -c:v libx264 -b:v 1.28M -maxrate 1.28M -bufsize 0.64M output.mp4
+ffmpeg -i input -c:v libx264 -b:v 3.20M -maxrate 3.20M -bufsize 1.6M output.mp4
+ffmpeg -i input -c:v libx264 -b:v 5.12M -maxrate 5.12M -bufsize 2.56M output.mp4
+ffmpeg -i input -c:v libx264 -b:v 38M -maxrate 38M -bufsize 19M output.mp4
+
+							H265	
+ffmpeg -i input -c:v libx265 -b:v 1M -maxrate 1M -bufsize 0.5M output.mp4
+ffmpeg -i input -c:v libx265 -b:v 2M -maxrate 2M -bufsize 1M output.mp4
+ffmpeg -i input -c:v libx265 -b:v 4M -maxrate 4M-bufsize 2M output.mp4
+ffmpeg -i input -c:v libx265 -b:v 24 -maxrate 24 -bufsize 12M output.mp4
+
+							VP9
+ffmpeg -i input.mp4 -c:v libvpx-vp9 -minrate 1.81M -maxrate 1.81M -b:v 1.81M output.webm
+ffmpeg -i input.mp4 -c:v libvpx-vp9 -minrate 12M -maxrate 12M -b:v 12M output.webm
+ffmpeg -i input.mp4 -c:v libvpx-vp9 -minrate 18M -maxrate 18M -b:v 18M output.webm
+ffmpeg -i input.mp4 -c:v libvpx-vp9 -minrate 60M -maxrate 60M -b:v 60M output.webm
+
+
+
+
